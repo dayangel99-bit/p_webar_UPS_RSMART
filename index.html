@@ -85,41 +85,35 @@
   </div>
 
 <model-viewer
-    id="visorAR"
-    src="RA__RSMAT_prueba.glb"
+  src="RA_RSMAT_prueba.glb"
 
-    ar
-    ar-modes="scene-viewer webxr quick-look"
+  ar
+  ar-modes="scene-viewer quick-look webxr"
 
-    camera-controls
-    auto-rotate
+  camera-controls
+  auto-rotate
 
-    shadow-intensity="1"
-    exposure="1"
+  shadow-intensity="1"
 
-    environment-image="neutral"
-    tone-mapping="neutral"
+  exposure="1"
 
-    style="background: radial-gradient(circle at center,
-#e6e7e5 0%,
-#e2e5e8 35%,
-#cfd6df 60%,
-#aab5c7 82%,
-#5b6a82 100%);">
+  environment-image="neutral"
+
+  tone-mapping="neutral"
+
+  style="
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center,
+    #e6e7e5 0%,
+    #e2e5e8 35%,
+    #cfd6df 60%,
+    #aab5c7 82%,
+    #5b6a82 100%);
+  ">
+
 </model-viewer>
 
-<button id="btnAR">
-VER EN TU ESPACIO
-</button>
-<script>
-const botonAR = document.getElementById("btnAR");
-const visor = document.getElementById("visorAR");
 
-botonAR.addEventListener("click", async () => {
-  if (visor.activateAR) {
-    visor.activateAR();
-  }
-});
-</script>
 </body>
 </html>
